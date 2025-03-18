@@ -4,17 +4,60 @@
       Blank
     </ion-title>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-alert
+trigger="present-alert"
+header="seu valor é:"
+message={{res}}
+[buttons]="alertButton"
+>
+
+</ion-alert>
+
+<ion-content [fullscreen]="true">  <ion-item>
+  <ion-label> distancia: </ion-label>
+  <ion-input [(ngModel)]="dis" type="number"></ion-input>
+</ion-item>
+<ion-item>
+
+<ion-label>selecione o tipo de comustivel</ion-label>
+<ion-radio-group [(ngModel)]="tipo">
+  <ion-item>
+    <ion-label>Gasolina </ion-label>
+    <ion-radio value="Gasolina" > </ion-radio>
+  </ion-item>
+
+  <ion-item>
+  <ion-label>Alcool </ion-label>
+        <ion-radio value="Alcool"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Disel</ion-label>
+              <ion-radio value="Disel"></ion-radio>
+            </ion-item>
+
+</ion-radio-group>
+
+</ion-item>
+
+<ion-button expand="full" (click)="converter()" id="present-alert" > caucular consumo</ion-button>
+
+<ion-item>
+<ion-alert trigger="present-alert" message={{res}} header="seu consumo em litros é" [buttons]="alertButton"  >
+
+</ion-alert>
+
+
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="large">Blank</ion-title>
+
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+
+
+
