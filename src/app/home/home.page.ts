@@ -17,18 +17,15 @@ export class HomePage {
   alertButton = 'ok'
 converter(){
 
-  if(this.tipo == 'Gasolina'){
-    this.res = this.dis/12
+  if(this.tipo == 'USA'){
+    this.res = this.dis/5
    }
 
- if(this.tipo == 'Alcool'){
-  this.res = this.dis / 8
+ if(this.tipo == 'EUA'){
+  this.res = this.dis / 5.5
 
  }
- if(this.tipo == 'Disel'){
-  this.res = this.dis / 10
 
- }
 }
 }
 
